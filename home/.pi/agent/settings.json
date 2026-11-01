@@ -1,44 +1,13 @@
 {
-  "images": {
-    "blockImages": false
-  },
-  "terminal": {
-    "showImages": true,
-    "showTerminalProgress": true
-  },
-  "hideThinkingBlock": true,
-  "quietStartup": true,
-  "theme": "rose-pine-moon",
-  "steeringMode": "all",
-  "followUpMode": "all",
-  "collapseChangelog": true,
+  "lastChangelogVersion": "1.4.0",
   "packages": [
-    "npm:pi-web-access",
-    "npm:@ryan_nookpi/pi-extension-codex-fast-mode@0.2.6",
-    "npm:pi-subagents",
-    "npm:pi-lens",
-    "npm:@juicesharp/rpiv-ask-user-question",
-    "npm:@juicesharp/rpiv-todo",
-    "npm:pi-goal-x",
-    "npm:billion-context",
-    "npm:bigpowers",
-    "npm:pi-powerline-footer",
-    "npm:@plannotator/pi-extension",
-    "npm:openwiki",
-    "npm:@dietrichgebert/ponytail",
-    "npm:pi-plugin-manager",
-    "npm:pi-simplify",
-    "npm:pi-vim",
-    "npm:pi-lmstudio",
-    "npm:pi-nvim",
-    "npm:compact-adviser"
+    "npm:pi-herdr-agents",
+    "npm:pi-mcp-adapter",
+    "npm:pi-web-access"
   ],
-  "lastChangelogVersion": "1.1.0",
-  "tuiMode": "fullscreen",
-  "autocompleteMaxVisible": 7,
-  "defaultProvider": "omlx",
-  "defaultModel": "Qwen3.8-27B-4bit",
   "extensions": [
     "-builtin:mcp"
-  ]
+  ],
+  "defaultProvider": "omlx",
+  "defaultModel": "Qwen3.6-35B-A3B-4bit"
 }

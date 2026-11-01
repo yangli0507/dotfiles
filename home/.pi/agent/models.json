@@ -1,15 +1,5 @@
 {
   "providers": {
-    "lmstudio": {
-      "baseUrl": "http://localhost:1234/v1",
-      "api": "openai-completions",
-      "apiKey": "lm-studio",
-      "models": [
-        {
-          "id": "qwen/qwen3.8-27b"
-        }
-      ]
-    },
     "omlx": {
       "baseUrl": "http://127.0.0.1:8000/v1",
       "api": "openai-completions",
@@ -17,13 +7,9 @@
       "authHeader": true,
       "models": [
         {
-          "id": "Qwen3.8-27B-4bit",
-          "name": "Qwen3.8-27B-4bit",
-          "reasoning": true,
-          "compat": {
-            "thinkingFormat": "qwen",
-            "supportsReasoningEffort": false
-          },
+          "id": "Qwen3.6-35B-A3B-4bit",
+          "name": "Qwen3.6-35B-A3B-4bit",
+          "reasoning": false,
           "input": [
             "text",
             "image"
