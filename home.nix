@@ -60,6 +60,7 @@ in
       push.autoSetupRemote = true;
       pull.rebase = true;
       rebase.updateRefs = true;
+      credential.helper = "osxkeychain";
     };
   };
 
