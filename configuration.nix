@@ -17,10 +17,10 @@
       AppleInterfaceStyle = "Dark";
       KeyRepeat = 2;          # fast key repeat
       InitialKeyRepeat = 15;  # short delay before repeat
-      _HIHideMenuBar = true;  # auto-hide the menu bar
+      _HIHideMenuBar = false;  # auto-hide the menu bar
       AppleShowAllExtensions = true;
     };
-    dock.autohide = true;
+    dock.autohide = false;
     finder.FXPreferredViewStyle = "Nlsv";  # list view by default
     finder.CreateDesktop = false;          # clean desktop
     trackpad.Clicking = true;              # tap to click
@@ -34,12 +34,31 @@
     onActivation.cleanup = "zap";  # remove anything not listed here
     onActivation.autoUpdate = true;
     onActivation.extraFlags = [ "--force" ];
+    
     brews = [
       "herdr"
+      "ripgrep"
+      "btop"
+      "fd"
+      "tree"
+      "nvm"
+      "uv"
+      "lsd"
+      "tldr"
+      "tree-sitter"
+      "tree-sitter-cli"
+      "fastfetch"
+      "lazygit"
+      "bun"
+      "zip"
+      "unzip"
     ];
     casks = [
       "wezterm"
       "claude-code"
+      "bazecor"
+      "iina"
+      "rectangle"
     ];
   };
 }

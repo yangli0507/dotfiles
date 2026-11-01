@@ -12,13 +12,22 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+    # addition to fetch the Oh My Pi input
+    omp.url = "github:can1357/oh-my-pi";
+
+    # Added treehouse input
+    treehouse = {
+      url = "github:kunchenguid/treehouse";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nix-darwin, nix-homebrew, home-manager, nixpkgs }:
+  # Added ', ...' to accept extra inputs like omp safely
+  outputs = inputs@{ self, nix-darwin, nix-homebrew, home-manager, nixpkgs, ... }:
     let
       # The one username line to change if this isn't your machine.
       # bootstrap.sh offers to rewrite this for you if your macOS username differs.
-      user = "kunchen";
+      user = "yangli";
     in
     {
       darwinConfigurations."mac" = nix-darwin.lib.darwinSystem {
@@ -30,10 +39,15 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit user; };
+            
+            # FIX 2: Inherit inputs here so home.nix can load the omp module
+            home-manager.extraSpecialArgs = { inherit user inputs; }; 
             home-manager.users.${user} = import ./home.nix;
           }
         ];
       };
     };
 }
+
+
+

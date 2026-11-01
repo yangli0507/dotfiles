@@ -1,17 +1,43 @@
 {
   "providers": {
-    "openai-codex": {
-      "modelOverrides": {
-        "gpt-5.6-luna": {
-          "contextWindow": 272000
-        },
-        "gpt-5.6-sol": {
-          "contextWindow": 272000
-        },
-        "gpt-5.6-terra": {
-          "contextWindow": 272000
+    "lmstudio": {
+      "baseUrl": "http://localhost:1234/v1",
+      "api": "openai-completions",
+      "apiKey": "lm-studio",
+      "models": [
+        {
+          "id": "qwen/qwen3.8-27b"
         }
-      }
+      ]
+    },
+    "omlx": {
+      "baseUrl": "http://127.0.0.1:8000/v1",
+      "api": "openai-completions",
+      "apiKey": "omlx-decidedlyso",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "Qwen3.8-27B-4bit",
+          "name": "Qwen3.8-27B-4bit",
+          "reasoning": true,
+          "compat": {
+            "thinkingFormat": "qwen",
+            "supportsReasoningEffort": false
+          },
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 262144,
+          "maxTokens": 32768
+        }
+      ]
     }
   }
 }

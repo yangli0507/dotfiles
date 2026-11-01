@@ -10,4 +10,10 @@ o.clipboard = 'unnamedplus'    -- share the system clipboard
 o.scrolloff = 16               -- keep cursor away from the screen edge
 o.undofile = true              -- persistent undo across sessions
 o.mouse = ''                   -- no mouse in nvim; also lets Herdr keep host mouse capture off so Escape isn't swallowed
+o.showmode = false             -- Don't show the mode, since it's already in the status line
+o.splitright = true
+o.splitbelow = true
 
+
+o.list = true
+o.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
